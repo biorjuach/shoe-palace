@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "ecomerce.html", "use": "@vercel/static" },
+    { "src": "images/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/images/(.*)", "dest": "/images/$1" },
+    { "src": "/(.*)", "dest": "/ecomerce.html" }
+  ]
+}
